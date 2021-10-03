@@ -168,6 +168,6 @@ class __TwigTemplate_98fe16b8b5a42fc61b7c719701ab399da477bd3d70c93c137770be660ee
 
     {{ include('@WebProfiler/Profiler/toolbar_item.html.twig', { link: false }) }}
 {% endblock %}
-", "@WebProfiler/Collector/ajax.html.twig", "/home/hennequin/php/proj-agvoy/agvoy-app/website-skeleton/vendor/symfony/web-profiler-bundle/Resources/views/Collector/ajax.html.twig");
+", "@WebProfiler/Collector/ajax.html.twig", "/home/hennequin/php/proj-agvoy/agvoy-app/vendor/symfony/web-profiler-bundle/Resources/views/Collector/ajax.html.twig");
     }
 }

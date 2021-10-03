@@ -803,6 +803,6 @@ class __TwigTemplate_761087a31ad67dfb4f734ac3d1e0ff9f0f6b7743e3da3e4a43a4cb37468
         </table>
     {% endif %}
 {% endblock %}
-", "@WebProfiler/Collector/config.html.twig", "/home/hennequin/php/proj-agvoy/agvoy-app/website-skeleton/vendor/symfony/web-profiler-bundle/Resources/views/Collector/config.html.twig");
+", "@WebProfiler/Collector/config.html.twig", "/home/hennequin/php/proj-agvoy/agvoy-app/vendor/symfony/web-profiler-bundle/Resources/views/Collector/config.html.twig");
     }
 }

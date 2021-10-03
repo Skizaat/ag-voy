@@ -973,6 +973,6 @@ class Theme {
         return hash >>> 0;
     }
 }
-", "@WebProfiler/Collector/time.js", "/home/hennequin/php/proj-agvoy/agvoy-app/website-skeleton/vendor/symfony/web-profiler-bundle/Resources/views/Collector/time.js");
+", "@WebProfiler/Collector/time.js", "/home/hennequin/php/proj-agvoy/agvoy-app/vendor/symfony/web-profiler-bundle/Resources/views/Collector/time.js");
     }
 }

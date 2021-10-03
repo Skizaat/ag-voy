@@ -8,12 +8,10 @@
 
 _A faire incessament sous peu_
 
-
-- créer les premières entités
+- créer des données test
 - créer les pages de consultation des premières entités
 
 ~Fait~
 - créer le Git
 - finir le tp 4
-
-test
+- créer les premières entités

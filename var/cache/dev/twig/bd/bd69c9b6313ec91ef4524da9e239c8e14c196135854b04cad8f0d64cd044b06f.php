@@ -135,6 +135,6 @@ class __TwigTemplate_f1ece3938af253e7ef1396ca8217988e2757bcb5060eb875070447b6c5d
         {% endfor %}
     </tbody>
 </table>
-", "@WebProfiler/Profiler/bag.html.twig", "/home/hennequin/php/proj-agvoy/agvoy-app/website-skeleton/vendor/symfony/web-profiler-bundle/Resources/views/Profiler/bag.html.twig");
+", "@WebProfiler/Profiler/bag.html.twig", "/home/hennequin/php/proj-agvoy/agvoy-app/vendor/symfony/web-profiler-bundle/Resources/views/Profiler/bag.html.twig");
     }
 }

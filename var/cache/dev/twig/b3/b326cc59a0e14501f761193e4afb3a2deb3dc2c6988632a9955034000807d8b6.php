@@ -79,6 +79,6 @@ class __TwigTemplate_5727c12798196b10b44731b338e273b2401359f7415ac7abf8bb03d1f3f
 /*
 {{ include('@Twig/Exception/exception.txt.twig', { exception: exception }) }}
 */
-", "@Twig/Exception/exception.css.twig", "/home/hennequin/php/proj-agvoy/agvoy-app/website-skeleton/vendor/symfony/twig-bundle/Resources/views/Exception/exception.css.twig");
+", "@Twig/Exception/exception.css.twig", "/home/hennequin/php/proj-agvoy/agvoy-app/vendor/symfony/twig-bundle/Resources/views/Exception/exception.css.twig");
     }
 }

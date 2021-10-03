@@ -2080,6 +2080,6 @@ class __TwigTemplate_8903d23ddb4e0682560a213f9f94465e0d1115d997cf3873999faf06971
         {{ tree.form_tree_details(childName, childData, forms_by_hash) }}
     {% endfor %}
 {% endmacro %}
-", "@WebProfiler/Collector/form.html.twig", "/home/hennequin/php/proj-agvoy/agvoy-app/website-skeleton/vendor/symfony/web-profiler-bundle/Resources/views/Collector/form.html.twig");
+", "@WebProfiler/Collector/form.html.twig", "/home/hennequin/php/proj-agvoy/agvoy-app/vendor/symfony/web-profiler-bundle/Resources/views/Collector/form.html.twig");
     }
 }

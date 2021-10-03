@@ -63,6 +63,6 @@ class __TwigTemplate_935acb8d4393f4e01d2eacb2acf151c741ad6e70f7e470afb74f340f990
     public function getSourceContext()
     {
         return new Source("<textarea <?php echo \$view['form']->block(\$form, 'widget_attributes') ?>><?php echo \$view->escape(\$value) ?></textarea>
-", "@Framework/Form/textarea_widget.html.php", "/home/hennequin/php/proj-agvoy/agvoy-app/website-skeleton/vendor/symfony/framework-bundle/Resources/views/Form/textarea_widget.html.php");
+", "@Framework/Form/textarea_widget.html.php", "/home/hennequin/php/proj-agvoy/agvoy-app/vendor/symfony/framework-bundle/Resources/views/Form/textarea_widget.html.php");
     }
 }

@@ -63,6 +63,6 @@ class __TwigTemplate_5f7fbe0fd8d458d4ce67409d97775659986aaecdeebabb144bb6e00a683
     public function getSourceContext()
     {
         return new Source("<?php echo \$view['form']->block(\$form, 'form_widget_simple', ['type' => \$type ?? 'range']);
-", "@Framework/Form/range_widget.html.php", "/home/hennequin/php/proj-agvoy/agvoy-app/website-skeleton/vendor/symfony/framework-bundle/Resources/views/Form/range_widget.html.php");
+", "@Framework/Form/range_widget.html.php", "/home/hennequin/php/proj-agvoy/agvoy-app/vendor/symfony/framework-bundle/Resources/views/Form/range_widget.html.php");
     }
 }

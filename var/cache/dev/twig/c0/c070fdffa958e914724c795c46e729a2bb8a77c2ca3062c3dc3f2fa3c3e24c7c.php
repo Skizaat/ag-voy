@@ -125,6 +125,6 @@ class __TwigTemplate_dee6197431f2ebb74f0e24dc7a939b3e48876a56e4ae88bffd2b2f5ba82
 .exception-message-wrapper .container {
     min-height: unset;
 }
-", "@WebProfiler/Collector/exception.css.twig", "/home/hennequin/php/proj-agvoy/agvoy-app/website-skeleton/vendor/symfony/web-profiler-bundle/Resources/views/Collector/exception.css.twig");
+", "@WebProfiler/Collector/exception.css.twig", "/home/hennequin/php/proj-agvoy/agvoy-app/vendor/symfony/web-profiler-bundle/Resources/views/Collector/exception.css.twig");
     }
 }
