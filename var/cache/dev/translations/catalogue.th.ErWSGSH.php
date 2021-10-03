@@ -101,6 +101,7 @@ $catalogue = new MessageCatalogue('th', array (
     'This value should satisfy at least one of the following constraints:' => 'ค่านี้ควรเป็นไปตามข้อจำกัดอย่างน้อยหนึ่งข้อจากข้อจำกัดเหล่านี้:',
     'Each element of this collection should satisfy its own set of constraints.' => 'สมากชิกแต่ละตัวในคอเล็กชั่นควรเป็นไปตามเซ็ตข้อจำกัดของคอเล็กชั่น',
     'This value is not a valid International Securities Identification Number (ISIN).' => 'ค่า​รหัสหลักทรัพย์สากล (ISIN) ไม่ถูกต้อง',
+    'This value should be a valid expression.' => 'ค่านี้ควรเป็นนิพจน์ที่ถูกต้อง',
     'This form should not contain extra fields.' => 'ฟอร์มนี้ไม่ควรมี extra fields',
     'The uploaded file was too large. Please try to upload a smaller file.' => 'ไฟล์ที่อัพโหลดมีขนาดใหญ่เกินไป กรุณาลองอัพโหลดใหม่อีกครั้งด้วยไฟล์ที่มีขนาดเล็กลง',
     'The CSRF token is invalid. Please try to resubmit the form.' => 'CSRF token ไม่ถูกต้อง กรุณาลองส่งแบบฟอร์มใหม่',

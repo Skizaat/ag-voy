@@ -1,12 +1,17 @@
 *A faire pour avancer le projet*
 
-- créer le Git
-- Faire une fiche résumé des commandes vues dans les TP précédents
+
+- Faire une fiche résumé des commandes vues dans les TP précédents (TP 1 fait)
 - faire une mindmap du projet
+- mettre mes fiches papier dans le projet
 (- Lire de la documentation)
 
 _A faire incessament sous peu_
 
-- finir le TP 4 (Twig)
+
 - créer les premières entités
 - créer les pages de consultation des premières entités
+
+~Fait~
+- créer le Git
+- finir le tp 4

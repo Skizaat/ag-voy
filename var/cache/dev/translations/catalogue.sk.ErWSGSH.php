@@ -52,7 +52,7 @@ $catalogue = new MessageCatalogue('sk', array (
     'This value should have exactly {{ limit }} character.|This value should have exactly {{ limit }} characters.' => 'Táto hodnota by mala mať presne {{ limit }} znak.|Táto hodnota by mala mať presne {{ limit }} znaky.|Táto hodnota by mala mať presne {{ limit }} znakov.',
     'The file was only partially uploaded.' => 'Bola nahraná len časť súboru.',
     'No file was uploaded.' => 'Žiadny súbor nebol nahraný.',
-    'No temporary folder was configured in php.ini.' => 'V php.ini nie je nastavená cesta k adresáru pre dočasné súbory.',
+    'No temporary folder was configured in php.ini.' => 'V php.ini nie je nastavená cesta k addressáru pre dočasné súbory.',
     'Cannot write temporary file to disk.' => 'Dočasný súbor sa nepodarilo zapísať na disk.',
     'A PHP extension caused the upload to fail.' => 'Rozšírenie PHP zabránilo nahraniu súboru.',
     'This collection should contain {{ limit }} element or more.|This collection should contain {{ limit }} elements or more.' => 'Táto kolekcia by mala obsahovať aspoň {{ limit }} prvok alebo viac.|Táto kolekcia by mala obsahovať aspoň {{ limit }} prvky alebo viac.|Táto kolekcia by mala obsahovať aspoň {{ limit }} prvkov alebo viac.',
@@ -101,6 +101,7 @@ $catalogue = new MessageCatalogue('sk', array (
     'This value should satisfy at least one of the following constraints:' => 'Táto hodnota musí spĺňať aspoň jedno z nasledujúcich obmedzení:',
     'Each element of this collection should satisfy its own set of constraints.' => 'Každý prvok v tejto kolekcii musí spĺňať svoje vlastné obmedzenia.',
     'This value is not a valid International Securities Identification Number (ISIN).' => 'Táto hodnota nie je platné medzinárodné označenie cenného papiera (ISIN).',
+    'This value should be a valid expression.' => 'Táto hodnota by mala byť platným výrazom.',
     'This form should not contain extra fields.' => 'Polia by nemali obsahovať ďalšie prvky.',
     'The uploaded file was too large. Please try to upload a smaller file.' => 'Odoslaný súbor je príliš veľký. Prosím odošlite súbor s menšou veľkosťou.',
     'The CSRF token is invalid. Please try to resubmit the form.' => 'CSRF token je neplatný. Prosím skúste znovu odoslať formulár.',
@@ -154,6 +155,8 @@ $catalogue = new MessageCatalogue('sk', array (
     'Account is locked.' => 'Účet je zablokovaný.',
     'Too many failed login attempts, please try again later.' => 'Príliš mnoho neúspešných pokusov o prihlásenie. Skúste to prosím znovu neskôr.',
     'Invalid or expired login link.' => 'Neplatný alebo expirovaný odkaz na prihlásenie.',
+    'Too many failed login attempts, please try again in %minutes% minute.' => 'Príliš veľa neúspešných pokusov o prihlásenie. Skúste to znova o %minutes% minútu.',
+    'Too many failed login attempts, please try again in %minutes% minutes.' => 'Príliš veľa neúspešných pokusov o prihlásenie. Skúste to znova o %minutes% minút.',
   ),
 ));
 

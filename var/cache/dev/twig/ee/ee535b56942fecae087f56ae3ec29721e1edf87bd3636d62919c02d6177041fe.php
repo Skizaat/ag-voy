@@ -63,6 +63,6 @@ class __TwigTemplate_c4cd34471123cbb02f6bbf370b3fedc022d327c7816ee14d9fd42d7d2ac
     public function getSourceContext()
     {
         return new Source("<?php echo \$view['form']->block(\$form, 'choice_widget_options') ?>
-", "@Framework/Form/choice_options.html.php", "/home/hennequin/php/proj-agvoy/agvoy-app/vendor/symfony/framework-bundle/Resources/views/Form/choice_options.html.php");
+", "@Framework/Form/choice_options.html.php", "/home/hennequin/php/proj-agvoy/agvoy-app/website-skeleton/vendor/symfony/framework-bundle/Resources/views/Form/choice_options.html.php");
     }
 }

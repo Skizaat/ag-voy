@@ -71,6 +71,6 @@ class __TwigTemplate_127c2825c47435d8d58428cba3e52693c9bc6447add5db07b931dbe6c26
     value=\"<?php echo \$view->escape(\$value) ?>\"
     <?php if (\$checked): ?> checked=\"checked\"<?php endif ?>
 />
-", "@Framework/Form/radio_widget.html.php", "/home/hennequin/php/proj-agvoy/agvoy-app/vendor/symfony/framework-bundle/Resources/views/Form/radio_widget.html.php");
+", "@Framework/Form/radio_widget.html.php", "/home/hennequin/php/proj-agvoy/agvoy-app/website-skeleton/vendor/symfony/framework-bundle/Resources/views/Form/radio_widget.html.php");
     }
 }

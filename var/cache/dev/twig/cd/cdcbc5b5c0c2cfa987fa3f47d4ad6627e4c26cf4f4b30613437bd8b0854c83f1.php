@@ -204,6 +204,6 @@ class __TwigTemplate_9d265a28c5085d5d91901d49eb0483cf91138a9d4ef1300dad08890ad16
         })|raw }}
     </div>
 {% endif %}
-", "@Twig/Exception/trace.html.twig", "/home/hennequin/php/proj-agvoy/agvoy-app/vendor/symfony/twig-bundle/Resources/views/Exception/trace.html.twig");
+", "@Twig/Exception/trace.html.twig", "/home/hennequin/php/proj-agvoy/agvoy-app/website-skeleton/vendor/symfony/twig-bundle/Resources/views/Exception/trace.html.twig");
     }
 }

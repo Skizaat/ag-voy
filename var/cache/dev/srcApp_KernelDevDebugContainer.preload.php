@@ -10,7 +10,7 @@ if (in_array(PHP_SAPI, ['cli', 'phpdbg'], true)) {
 }
 
 require dirname(__DIR__, 3).'/vendor/autoload.php';
-require __DIR__.'/ContainerD7dOhJD/srcApp_KernelDevDebugContainer.php';
+require __DIR__.'/ContainerGHI48Gz/srcApp_KernelDevDebugContainer.php';
 
 $classes = [];
 $classes[] = 'Symfony\Bundle\FrameworkBundle\FrameworkBundle';
@@ -24,7 +24,6 @@ $classes[] = 'Doctrine\Bundle\DoctrineBundle\DoctrineBundle';
 $classes[] = 'Doctrine\Bundle\MigrationsBundle\DoctrineMigrationsBundle';
 $classes[] = 'Symfony\Bundle\SecurityBundle\SecurityBundle';
 $classes[] = 'Twig\Extra\TwigExtraBundle\TwigExtraBundle';
-$classes[] = 'Symfony\Bundle\WebServerBundle\WebServerBundle';
 $classes[] = 'Symfony\Component\HttpClient\TraceableHttpClient';
 $classes[] = 'Symfony\Contracts\HttpClient\HttpClientInterface';
 $classes[] = 'Symfony\Component\HttpClient\HttpClient';
@@ -270,6 +269,7 @@ $classes[] = 'Symfony\Bundle\MakerBundle\Util\AutoloaderUtil';
 $classes[] = 'Symfony\Bundle\MakerBundle\Util\ComposerAutoloaderFinder';
 $classes[] = 'Symfony\Bundle\MakerBundle\Util\MakerFileLinkFormatter';
 $classes[] = 'Symfony\Bundle\MakerBundle\Generator';
+$classes[] = 'Symfony\Bundle\MakerBundle\Util\TemplateComponentGenerator';
 $classes[] = 'Symfony\Bundle\MakerBundle\Util\PhpCompatUtil';
 $classes[] = 'Symfony\Bundle\MakerBundle\Renderer\FormTypeRenderer';
 $classes[] = 'Symfony\Bundle\MakerBundle\Security\SecurityConfigUpdater';
@@ -485,9 +485,5 @@ $classes[] = 'Symfony\Bundle\WebProfilerBundle\Controller\RouterController';
 $classes[] = 'Symfony\Bundle\WebProfilerBundle\Csp\ContentSecurityPolicyHandler';
 $classes[] = 'Symfony\Bundle\WebProfilerBundle\Csp\NonceGenerator';
 $classes[] = 'Symfony\Bundle\WebProfilerBundle\EventListener\WebDebugToolbarListener';
-$classes[] = 'Symfony\Bundle\WebServerBundle\Command\ServerRunCommand';
-$classes[] = 'Symfony\Bundle\WebServerBundle\Command\ServerStartCommand';
-$classes[] = 'Symfony\Bundle\WebServerBundle\Command\ServerStatusCommand';
-$classes[] = 'Symfony\Bundle\WebServerBundle\Command\ServerStopCommand';
 
 Preloader::preload($classes);

@@ -171,6 +171,6 @@ class __TwigTemplate_bc48c52884662fc3dbe654f06e52f13b06b9ca6d77ec61d777dc9eac33b
         {%- endfor -%}
     </pre>
 {% endif %}
-", "@Doctrine/Collector/explain.html.twig", "/home/hennequin/php/proj-agvoy/agvoy-app/vendor/doctrine/doctrine-bundle/Resources/views/Collector/explain.html.twig");
+", "@Doctrine/Collector/explain.html.twig", "/home/hennequin/php/proj-agvoy/agvoy-app/website-skeleton/vendor/doctrine/doctrine-bundle/Resources/views/Collector/explain.html.twig");
     }
 }

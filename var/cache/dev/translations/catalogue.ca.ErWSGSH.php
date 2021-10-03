@@ -101,6 +101,7 @@ $catalogue = new MessageCatalogue('ca', array (
     'This value should satisfy at least one of the following constraints:' => 'Aquest valor ha de satisfer almenys una de les restriccions següents:',
     'Each element of this collection should satisfy its own set of constraints.' => 'Cada element d\'aquesta col·lecció hauria de satisfer el seu propi conjunt de restriccions.',
     'This value is not a valid International Securities Identification Number (ISIN).' => 'Aquest valor no és un número d\'identificació de valors internacionals (ISIN) vàlid.',
+    'This value should be a valid expression.' => 'Aquest valor hauria de ser una expressió vàlida.',
     'This form should not contain extra fields.' => 'Aquest formulari no hauria de contenir camps addicionals.',
     'The uploaded file was too large. Please try to upload a smaller file.' => 'L\'arxiu pujat és massa gran. Per favor, pugi un arxiu més petit.',
     'The CSRF token is invalid. Please try to resubmit the form.' => 'El token CSRF no és vàlid. Per favor, provi d\'enviar novament el formulari.',
@@ -154,6 +155,8 @@ $catalogue = new MessageCatalogue('ca', array (
     'Account is locked.' => 'El compte està bloquejat.',
     'Too many failed login attempts, please try again later.' => 'Massa intents d\'inici de sessió fallits, torneu-ho a provar més tard.',
     'Invalid or expired login link.' => 'Enllaç d\'inici de sessió no vàlid o caducat.',
+    'Too many failed login attempts, please try again in %minutes% minute.' => 'Massa intents d\'inici de sessió fallits, torneu-ho a provar en %minutes% minut.',
+    'Too many failed login attempts, please try again in %minutes% minutes.' => 'Massa intents d\'inici de sessió fallits, torneu-ho a provar en %minutes% minuts.',
   ),
 ));
 
