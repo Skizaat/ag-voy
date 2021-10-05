@@ -2,16 +2,16 @@
 
 
 - Faire une fiche résumé des commandes vues dans les TP précédents (TP 1 fait)
-- faire une mindmap du projet
+- faire une mindmap du projet (en cours d'avancement)
 - mettre mes fiches papier dans le projet
 (- Lire de la documentation)
 
 _A faire incessament sous peu_
 
-- créer des données test
 - créer les pages de consultation des premières entités
 
 ~Fait~
 - créer le Git
 - finir le tp 4
 - créer les premières entités
+- créer des données test

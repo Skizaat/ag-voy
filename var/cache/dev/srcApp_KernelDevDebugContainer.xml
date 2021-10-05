@@ -351,6 +351,10 @@
       <tag name="doctrine.repository_service"/>
       <argument type="service" id="doctrine"/>
     </service>
+    <service id="App\Repository\RegionRepository" class="App\Repository\RegionRepository" autowire="true" autoconfigure="true">
+      <tag name="doctrine.repository_service"/>
+      <argument type="service" id="doctrine"/>
+    </service>
     <service id="App\Repository\RoomRepository" class="App\Repository\RoomRepository" autowire="true" autoconfigure="true">
       <tag name="doctrine.repository_service"/>
       <argument type="service" id="doctrine"/>
@@ -3908,7 +3912,7 @@
       <factory class="Doctrine\ORM\EntityManager" method="create"/>
     </service>
     <service id="doctrine.orm.container_repository_factory" class="Doctrine\Bundle\DoctrineBundle\Repository\ContainerRepositoryFactory" public="false">
-      <argument type="service" id=".service_locator.QefXq0O"/>
+      <argument type="service" id=".service_locator.EUfljUB"/>
     </service>
     <service id="doctrine.orm.manager_configurator.abstract" class="Doctrine\Bundle\DoctrineBundle\ManagerConfigurator" abstract="true">
       <argument type="collection"/>
@@ -4851,7 +4855,7 @@
       <tag name="console.command" command="server:run"/>
       <argument>/home/hennequin/php/proj-agvoy/agvoy-app/public</argument>
       <argument>dev</argument>
-      <argument>/home/hennequin/php/proj-agvoy/agvoy-app/var/cache</argument>
+      <argument>/home/hennequin/php/proj-agvoy/agvoy-app</argument>
       <call method="setName">
         <argument>server:run</argument>
       </call>
@@ -4860,21 +4864,21 @@
       <tag name="console.command" command="server:start"/>
       <argument>/home/hennequin/php/proj-agvoy/agvoy-app/public</argument>
       <argument>dev</argument>
-      <argument>/home/hennequin/php/proj-agvoy/agvoy-app/var/cache</argument>
+      <argument>/home/hennequin/php/proj-agvoy/agvoy-app</argument>
       <call method="setName">
         <argument>server:start</argument>
       </call>
     </service>
     <service id="web_server.command.server_stop" class="Symfony\Bundle\WebServerBundle\Command\ServerStopCommand" public="false">
       <tag name="console.command" command="server:stop"/>
-      <argument>/home/hennequin/php/proj-agvoy/agvoy-app/var/cache</argument>
+      <argument>/home/hennequin/php/proj-agvoy/agvoy-app</argument>
       <call method="setName">
         <argument>server:stop</argument>
       </call>
     </service>
     <service id="web_server.command.server_status" class="Symfony\Bundle\WebServerBundle\Command\ServerStatusCommand" public="false">
       <tag name="console.command" command="server:status"/>
-      <argument>/home/hennequin/php/proj-agvoy/agvoy-app/var/cache</argument>
+      <argument>/home/hennequin/php/proj-agvoy/agvoy-app</argument>
       <call method="setName">
         <argument>server:status</argument>
       </call>
@@ -4908,6 +4912,8 @@
     <service id=".abstract.instanceof.App\DataFixtures\AppFixtures" class="App\DataFixtures\AppFixtures" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\OwnerRepository" class="App\Repository\OwnerRepository" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Repository\OwnerRepository" class="App\Repository\OwnerRepository" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\RegionRepository" class="App\Repository\RegionRepository" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Repository\RegionRepository" class="App\Repository\RegionRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\RoomRepository" class="App\Repository\RoomRepository" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Repository\RoomRepository" class="App\Repository\RoomRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".service_locator.CmORmuK" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
@@ -5430,10 +5436,11 @@
       <argument type="service" id="cache.doctrine.orm.default.result"/>
       <factory class="Doctrine\Common\Cache\Psr6\DoctrineProvider" method="wrap"/>
     </service>
-    <service id=".service_locator.QefXq0O" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.EUfljUB" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Repository\OwnerRepository" type="service_closure" id="App\Repository\OwnerRepository"/>
+        <argument key="App\Repository\RegionRepository" type="service_closure" id="App\Repository\RegionRepository"/>
         <argument key="App\Repository\RoomRepository" type="service_closure" id="App\Repository\RoomRepository"/>
       </argument>
     </service>
