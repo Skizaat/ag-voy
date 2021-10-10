@@ -1,17 +1,19 @@
 *A faire pour avancer le projet*
 
 
-- Faire une fiche résumé des commandes vues dans les TP précédents (TP 1 fait)
+- Faire une fiche résumé des commandes vues dans les TP précédents (TP à partir de 6)
 - faire une mindmap du projet (en cours d'avancement)
 - mettre mes fiches papier dans le projet
 (- Lire de la documentation)
 
 _A faire incessament sous peu_
 
-- créer les pages de consultation des premières entités
+- créer les pages de consultation des premières entités => attendre les cruds
 
 ~Fait~
 - créer le Git
 - finir le tp 4
 - créer les premières entités
 - créer des données test
+- Faire une fiche résumé des commandes vues dans les TP précédents (TP 1,3,5)
+- faire une page d'acceuil
