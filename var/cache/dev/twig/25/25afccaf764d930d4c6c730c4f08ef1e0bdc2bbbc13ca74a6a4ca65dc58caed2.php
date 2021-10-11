@@ -56,18 +56,18 @@ class __TwigTemplate_ac8d4e90a911f648823c4b66f9cb077e52ac2bf768d637c37ff482ba9de
         // line 8
         echo "        ";
         $this->displayBlock('stylesheets', $context, $blocks);
-        // line 11
+        // line 13
         echo "
         ";
-        // line 12
+        // line 14
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 15
+        // line 21
         echo "    </head>
     <body>
         ";
-        // line 17
+        // line 23
         $this->displayBlock('body', $context, $blocks);
-        // line 20
+        // line 26
         echo "    </body>
 </html>
 ";
@@ -111,7 +111,12 @@ class __TwigTemplate_ac8d4e90a911f648823c4b66f9cb077e52ac2bf768d637c37ff482ba9de
         // line 9
         echo "            ";
         // line 10
-        echo "        ";
+        echo "            <!-- Core theme CSS (includes Bootstrap)-->
+            <link href=\"";
+        // line 11
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("css/styles.css"), "html", null, true);
+        echo "\" rel=\"stylesheet\">
+        ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -120,7 +125,7 @@ class __TwigTemplate_ac8d4e90a911f648823c4b66f9cb077e52ac2bf768d637c37ff482ba9de
 
     }
 
-    // line 12
+    // line 14
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -130,10 +135,17 @@ class __TwigTemplate_ac8d4e90a911f648823c4b66f9cb077e52ac2bf768d637c37ff482ba9de
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 13
+        // line 15
         echo "            ";
-        // line 14
-        echo "        ";
+        // line 16
+        echo "            <!-- Bootstrap core JS-->
+            <script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js\"></script>
+            <!-- Core theme JS-->
+            <script src=\"";
+        // line 19
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/scripts.js"), "html", null, true);
+        echo "\"></script>
+        ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -142,7 +154,7 @@ class __TwigTemplate_ac8d4e90a911f648823c4b66f9cb077e52ac2bf768d637c37ff482ba9de
 
     }
 
-    // line 17
+    // line 23
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -152,7 +164,7 @@ class __TwigTemplate_ac8d4e90a911f648823c4b66f9cb077e52ac2bf768d637c37ff482ba9de
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 18
+        // line 24
         echo "            
         ";
         
@@ -170,7 +182,7 @@ class __TwigTemplate_ac8d4e90a911f648823c4b66f9cb077e52ac2bf768d637c37ff482ba9de
 
     public function getDebugInfo()
     {
-        return array (  156 => 18,  146 => 17,  136 => 14,  134 => 13,  124 => 12,  114 => 10,  112 => 9,  102 => 8,  83 => 5,  71 => 20,  69 => 17,  65 => 15,  63 => 12,  60 => 11,  57 => 8,  53 => 5,  47 => 1,);
+        return array (  168 => 24,  158 => 23,  146 => 19,  141 => 16,  139 => 15,  129 => 14,  117 => 11,  114 => 10,  112 => 9,  102 => 8,  83 => 5,  71 => 26,  69 => 23,  65 => 21,  63 => 14,  60 => 13,  57 => 8,  53 => 5,  47 => 1,);
     }
 
     public function getSourceContext()
@@ -184,10 +196,16 @@ class __TwigTemplate_ac8d4e90a911f648823c4b66f9cb077e52ac2bf768d637c37ff482ba9de
            and uncomment the following Encore helpers to start using Symfony UX #}
         {% block stylesheets %}
             {#{{ encore_entry_link_tags('app') }}#}
+            <!-- Core theme CSS (includes Bootstrap)-->
+            <link href=\"{{ asset('css/styles.css') }}\" rel=\"stylesheet\">
         {% endblock %}
 
         {% block javascripts %}
             {#{{ encore_entry_script_tags('app') }}#}
+            <!-- Bootstrap core JS-->
+            <script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js\"></script>
+            <!-- Core theme JS-->
+            <script src=\"{{ asset('js/scripts.js') }}\"></script>
         {% endblock %}
     </head>
     <body>

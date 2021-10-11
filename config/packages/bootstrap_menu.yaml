@@ -1,0 +1,7 @@
+bootstrap_menu:
+  menus:
+    main:
+      items:
+        test:
+          label: 'Menu Test'
+          route: 'welcome'
