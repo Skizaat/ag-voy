@@ -263,9 +263,25 @@
     <parameter key="bootstrap_menu.menus" type="collection">
       <parameter key="main" type="collection">
         <parameter key="items" type="collection">
-          <parameter key="test" type="collection">
-            <parameter key="label">Menu Test</parameter>
-            <parameter key="route">welcome</parameter>
+          <parameter key="Region" type="collection">
+            <parameter key="label">Régions</parameter>
+            <parameter key="route">region_index</parameter>
+            <parameter key="is_divider">false</parameter>
+            <parameter key="route_parameters" type="collection"/>
+            <parameter key="roles" type="collection"/>
+            <parameter key="items" type="collection"/>
+          </parameter>
+          <parameter key="Room" type="collection">
+            <parameter key="label">Couettes et Cafés</parameter>
+            <parameter key="route">room_index</parameter>
+            <parameter key="is_divider">false</parameter>
+            <parameter key="route_parameters" type="collection"/>
+            <parameter key="roles" type="collection"/>
+            <parameter key="items" type="collection"/>
+          </parameter>
+          <parameter key="Owner" type="collection">
+            <parameter key="label">Propriétaires</parameter>
+            <parameter key="route">owner_index</parameter>
             <parameter key="is_divider">false</parameter>
             <parameter key="route_parameters" type="collection"/>
             <parameter key="roles" type="collection"/>

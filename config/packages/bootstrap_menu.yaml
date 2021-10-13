@@ -2,6 +2,12 @@ bootstrap_menu:
   menus:
     main:
       items:
-        test:
-          label: 'Menu Test'
-          route: 'welcome'
+        Region:
+          label: 'Régions'
+          route: 'region_index'
+        Room:
+          label: 'Couettes et Cafés'
+          route: 'room_index'
+        Owner:
+          label: 'Propriétaires'
+          route: 'owner_index'
