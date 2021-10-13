@@ -11,6 +11,10 @@ _A faire incessament sous peu_
 - créer les pages de consultation des premières entités => attendre les cruds
 - intégrer bootstrap
 
+'Bug to fix'
+
+- je peux rentrer qu'un caractère pour la country quand je crée une région
+
 ~Fait~
 - créer le Git
 - finir le tp 4
