@@ -26,7 +26,6 @@ _A faire incessament sous peu_
 - finir le tp 4
 - créer les premières entités
 - créer des données test
-- Faire une fiche résumé des commandes vues dans les TP précédents (TP 1,3,5,6)
 - faire une page d'acceuil
 - intégrer bootstrap
 - créer les pages de consultation des premières entités => avec les cruds
