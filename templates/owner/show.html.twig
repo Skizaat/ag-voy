@@ -27,6 +27,13 @@
                 <th>Country</th>
                 <td>{{ owner.country }}</td>
             </tr>
+            <tr>
+                <th>Rooms</th>
+                {% for room in owner.rooms %}
+                <td><a href="{{ path('room_show', {'id' : room.id}) }}">{{ room.summary }}</a></td>
+                <br>
+                {% endfor %}
+            </tr>
         </tbody>
     </table>
 

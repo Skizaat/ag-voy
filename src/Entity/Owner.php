@@ -35,7 +35,7 @@ class Owner
     private $address;
 
     /**
-     * @ORM\Column(type="string", length=1)
+     * @ORM\Column(type="string", length=2)
      */
     private $country;
 

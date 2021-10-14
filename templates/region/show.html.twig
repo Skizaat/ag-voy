@@ -23,6 +23,13 @@
                 <th>Country</th>
                 <td>{{ region.country }}</td>
             </tr>
+            <tr>
+                <th>Rooms</th>
+                {% for room in region.rooms %}
+                    <td><a href="{{ path('room_show', {'id' : room.id}) }}">{{ room.summary }}</a></td>
+                    <br>
+                {% endfor %}
+            </tr>
         </tbody>
     </table>
 

@@ -35,6 +35,17 @@
                 <th>Address</th>
                 <td>{{ room.address }}</td>
             </tr>
+            <tr>
+                <th>Regions</th>
+                  {% for region in room.regions %}
+                     <td><a href="{{ path('region_show', {'id' : region.id}) }}">{{ region.name }}</a></td>
+                    <br>
+                    {% endfor %}
+            </tr>
+            <tr>
+                <th>Owner</th>
+                 <td><a href="{{ path('owner_show', {'id' : room.owner.id}) }}">{{ room.owner.familyname }}</a></td>
+            </tr>
         </tbody>
     </table>
 

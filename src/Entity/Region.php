@@ -30,7 +30,7 @@ class Region
     private $presentation;
 
     /**
-     * @ORM\Column(type="string", length=1, nullable=true)
+     * @ORM\Column(type="string", length=2, nullable=true)
      */
     private $country;
 
