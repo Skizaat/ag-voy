@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\Entity\Room;
 use App\Form\RoomType;
 use App\Repository\RoomRepository;
+use App\Entity\Owner;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -25,12 +26,38 @@ class RoomController extends AbstractController
         ]);
     }
 
-    /**
-     * @Route("/new", name="room_new", methods={"GET","POST"})
+    // /**
+    //  * @Route("/new", name="room_new", methods={"GET","POST"})
+    //  */
+    // public function new(Request $request, Owner $owner): Response
+    // {
+
+    //     $room = new Room();
+    //     $form = $this->createForm(RoomType::class, $room);
+    //     $form->handleRequest($request);
+
+    //     if ($form->isSubmitted() && $form->isValid()) {
+    //         $entityManager = $this->getDoctrine()->getManager();
+    //         $entityManager->persist($room);
+    //         $entityManager->flush();
+
+    //         return $this->redirectToRoute('room_index', $owner->id, [], Response::HTTP_SEE_OTHER);
+    //     }
+
+    //     return $this->render('room/new.html.twig', [
+    //         'room' => $room,
+    //         'form' => $form->createView(),
+    //     ]);
+    // }
+
+     /**
+     * @Route("/createroomfrom/{id}", name="new_room_of", methods={"GET","POST"})
      */
-    public function new(Request $request): Response
+    public function create(Request $request, Owner $owner): Response
     {
+
         $room = new Room();
+        $room->setOwner($owner); //(ligne rajoutée pour créer dans owner)
         $form = $this->createForm(RoomType::class, $room);
         $form->handleRequest($request);
 
@@ -39,14 +66,17 @@ class RoomController extends AbstractController
             $entityManager->persist($room);
             $entityManager->flush();
 
-            return $this->redirectToRoute('room_index', [], Response::HTTP_SEE_OTHER);
+            return $this->redirectToRoute('owner_index', [], Response::HTTP_SEE_OTHER);
         }
 
-        return $this->render('room/new.html.twig', [
+        return $this->render('room/create.html.twig', [
+            'owner' => $owner, //(ligne rajoutée pour créer dans owner)
             'room' => $room,
             'form' => $form->createView(),
         ]);
     }
+
+
 
     /**
      * @Route("/{id}", name="room_show", methods={"GET"})

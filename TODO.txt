@@ -1,7 +1,7 @@
 *A faire pour avancer le projet*
 
 
-- Faire une fiche résumé des commandes vues dans les TP précédents (TP à partir de 8)
+
 - faire une mindmap du projet (en cours d'avancement)
 - mettre mes fiches papier dans le projet
 (- Lire de la documentation)
@@ -15,7 +15,11 @@ _A faire incessament sous peu_
 
 'Bug to fix'
 
-- je peux rentrer qu'un caractère pour la country quand je crée une région
+- j'arrive pas à associer une région à des rooms
+
+"Fixed bug"
+
+- je peux rentrer qu'un caractère pour la country quand je crée une région (réglé)
 
 ~Fait~
 - créer le Git
@@ -27,3 +31,4 @@ _A faire incessament sous peu_
 - intégrer bootstrap
 - créer les pages de consultation des premières entités => avec les cruds
 - actualiser le menu
+- Faire une fiche résumé des commandes vues dans les TP précédents

@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Room{ of {{ owner.familyname }} {% endblock %}
+
+{% block main %}
+    <h1>Create new Room</h1>
+
+    {{ include('room/_form.html.twig') }}
+
+    <a href="{{ path('owner_show', {id: owner.id}) }}">back to owner</a>
+{% endblock %}

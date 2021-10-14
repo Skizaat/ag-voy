@@ -18,7 +18,6 @@ return [
         '/region' => [[['_route' => 'region_index', '_controller' => 'App\\Controller\\RegionController::index'], null, ['GET' => 0], null, true, false, null]],
         '/region/new' => [[['_route' => 'region_new', '_controller' => 'App\\Controller\\RegionController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
         '/room' => [[['_route' => 'room_index', '_controller' => 'App\\Controller\\RoomController::index'], null, ['GET' => 0], null, true, false, null]],
-        '/room/new' => [[['_route' => 'room_new', '_controller' => 'App\\Controller\\RoomController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
         '/' => [[['_route' => 'welcome', '_controller' => 'App\\Controller\\WelcomeController::index'], null, null, null, false, false, null]],
     ],
     [ // $regexpList
@@ -46,13 +45,19 @@ return [
                 .'|/r(?'
                     .'|egion/([^/]++)(?'
                         .'|(*:239)'
-                        .'|/edit(*:252)'
-                        .'|(*:260)'
+                        .'|/(?'
+                            .'|edit(*:255)'
+                            .'|rooms(*:268)'
+                        .')'
+                        .'|(*:277)'
                     .')'
-                    .'|oom/([^/]++)(?'
-                        .'|(*:284)'
-                        .'|/edit(*:297)'
-                        .'|(*:305)'
+                    .'|oom/(?'
+                        .'|createroomfrom/([^/]++)(*:316)'
+                        .'|([^/]++)(?'
+                            .'|(*:335)'
+                            .'|/edit(*:348)'
+                            .'|(*:356)'
+                        .')'
                     .')'
                 .')'
             .')/?$}sD',
@@ -69,11 +74,13 @@ return [
         200 => [[['_route' => 'owner_edit', '_controller' => 'App\\Controller\\OwnerController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
         208 => [[['_route' => 'owner_delete', '_controller' => 'App\\Controller\\OwnerController::delete'], ['id'], ['POST' => 0], null, false, true, null]],
         239 => [[['_route' => 'region_show', '_controller' => 'App\\Controller\\RegionController::show'], ['id'], ['GET' => 0], null, false, true, null]],
-        252 => [[['_route' => 'region_edit', '_controller' => 'App\\Controller\\RegionController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
-        260 => [[['_route' => 'region_delete', '_controller' => 'App\\Controller\\RegionController::delete'], ['id'], ['POST' => 0], null, false, true, null]],
-        284 => [[['_route' => 'room_show', '_controller' => 'App\\Controller\\RoomController::show'], ['id'], ['GET' => 0], null, false, true, null]],
-        297 => [[['_route' => 'room_edit', '_controller' => 'App\\Controller\\RoomController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
-        305 => [
+        255 => [[['_route' => 'region_edit', '_controller' => 'App\\Controller\\RegionController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        268 => [[['_route' => 'room_by_region', '_controller' => 'App\\Controller\\RegionController::sortingRooms'], ['id'], ['GET' => 0], null, false, false, null]],
+        277 => [[['_route' => 'region_delete', '_controller' => 'App\\Controller\\RegionController::delete'], ['id'], ['POST' => 0], null, false, true, null]],
+        316 => [[['_route' => 'new_room_of', '_controller' => 'App\\Controller\\RoomController::create'], ['id'], ['GET' => 0, 'POST' => 1], null, false, true, null]],
+        335 => [[['_route' => 'room_show', '_controller' => 'App\\Controller\\RoomController::show'], ['id'], ['GET' => 0], null, false, true, null]],
+        348 => [[['_route' => 'room_edit', '_controller' => 'App\\Controller\\RoomController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        356 => [
             [['_route' => 'room_delete', '_controller' => 'App\\Controller\\RoomController::delete'], ['id'], ['POST' => 0], null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],

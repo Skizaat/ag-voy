@@ -91,4 +91,14 @@ class RegionController extends AbstractController
 
         return $this->redirectToRoute('region_index', [], Response::HTTP_SEE_OTHER);
     }
+
+    /**
+     * @Route("/{id}/rooms", name="room_by_region", methods={"GET"})
+     */
+    public function sortingRooms(Region $region): Response
+    {
+        return $this->render('region/showbyregion.html.twig', [
+            'region' => $region,
+        ]);
+    }
 }
