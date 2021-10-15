@@ -14,7 +14,7 @@ bootstrap_menu:
     anonymousaccount:
       items: 
         login:
-           label: 'Login'
+           label: 'Connexion'
            route: 'app_login'
 #        register:
 #           label: 'Register'
@@ -22,7 +22,7 @@ bootstrap_menu:
     account:
        items:
          logout:
-            label: 'Logout'
+            label: 'Déconnexion'
             route: 'app_logout'
             roles: [ 'ROLE_USER' ]
       

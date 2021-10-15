@@ -305,7 +305,7 @@
       <parameter key="anonymousaccount" type="collection">
         <parameter key="items" type="collection">
           <parameter key="login" type="collection">
-            <parameter key="label">Login</parameter>
+            <parameter key="label">Connexion</parameter>
             <parameter key="route">app_login</parameter>
             <parameter key="is_divider">false</parameter>
             <parameter key="route_parameters" type="collection"/>
@@ -317,7 +317,7 @@
       <parameter key="account" type="collection">
         <parameter key="items" type="collection">
           <parameter key="logout" type="collection">
-            <parameter key="label">Logout</parameter>
+            <parameter key="label">Déconnexion</parameter>
             <parameter key="route">app_logout</parameter>
             <parameter key="roles" type="collection">
               <parameter>ROLE_USER</parameter>

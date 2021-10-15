@@ -1,22 +1,22 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Rooms in {{region.name}}{% endblock %}
+{% block title %}Recherche {{region.name}}{% endblock %}
 
 {% block main %}
-    <h1>Rooms in {{region.name}}</h1>
+    <h1>Couettes et cafés disponibles dans {{region.name}}</h1>
 
     <table class="table">
         <thead>
             <tr>
-                <th>Id</th>
-                <th>Summary</th>
+                <th>N° de couette</th>
+                <th>Nom</th>
                 <th>Description</th>
-                <th>Capacity</th>
-                <th>Superficy</th>
-                <th>Price</th>
-                <th>Address</th>
+                <th>Capacité (en nombre de personne)</th>
+                <th>Superficie (en mètres carrés)</th>
+                <th>Prix en € par nuit</th>
+                <th>Adresse</th>
                 <th>Actions</th>
-                <th>Image</th>
+                <th>Aperçu</th>
             </tr>
         </thead>
         <tbody>
@@ -30,20 +30,20 @@
                 <td>{{ room.price }}</td>
                 <td>{{ room.address }}</td>
                 <td>
-                    <a href="{{ path('room_show', {'id': room.id}) }}">show</a>
+                    <a href="{{ path('room_show', {'id': room.id}) }}">voir</a>
                     {% if is_granted('ROLE_USER') %}
-                        <a href="{{ path('room_edit', {'id': room.id}) }}">edit</a>
+                        <a href="{{ path('room_edit', {'id': room.id}) }}">éditer</a>
                     {% endif %}
                 </td>
                 <td><img src="{{ vich_uploader_asset(room, 'imageFile') }}"/></td>
             </tr>
         {% else %}
             <tr>
-                <td colspan="8">no records found</td>
+                <td colspan="8">Il n'y a pas de couettes et cafés disponibles dans cette région</td>
             </tr>
         {% endfor %}
         </tbody>
     </table>
 
-    <a href="{{ path('region_index') }}">View all regions</a>
+    <a href="{{ path('region_index') }}">Voir toutes les régions</a>
 {% endblock %}

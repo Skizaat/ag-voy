@@ -1,19 +1,19 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Owner index{% endblock %}
+{% block title %}propriétaires{% endblock %}
 
 {% block main %}
-    <h1>Owner index</h1>
+    <h1>Liste des propriétaires</h1>
 
     <table class="table">
         <thead>
             <tr>
-                <th>Id</th>
-                <th>Firstname</th>
-                <th>Familyname</th>
-                <th>Address</th>
-                <th>Country</th>
-                <th>actions</th>
+                <th>N° de Propriétaire</th>
+                <th>Prénom</th>
+                <th>Nom</th>
+                <th>Addresse</th>
+                <th>Pays</th>
+                <th>Actions</th>
             </tr>
         </thead>
         <tbody>
@@ -25,21 +25,21 @@
                 <td>{{ owner.address }}</td>
                 <td>{{ owner.country }}</td>
                 <td>
-                    <a href="{{ path('owner_show', {'id': owner.id}) }}">show</a>
+                    <a href="{{ path('owner_show', {'id': owner.id}) }}">voir le profil</a>
                     {% if is_granted('ROLE_ADMIN') %}
-                        <a href="{{ path('owner_edit', {'id': owner.id}) }}">edit</a>
+                        <a href="{{ path('owner_edit', {'id': owner.id}) }}">editer le profil</a>
                     {% endif %}
                 </td>
             </tr>
         {% else %}
             <tr>
-                <td colspan="6">no records found</td>
+                <td colspan="6">Aucun propriétaires enregistrés</td>
             </tr>
         {% endfor %}
         </tbody>
     </table>
     
     {% if is_granted('ROLE_ADMIN') %}
-        <a href="{{ path('owner_new') }}">Create new</a>
+        <a href="{{ path('owner_new') }}">Créer un nouveau propriétaire</a>
     {% endif %}
 {% endblock %}

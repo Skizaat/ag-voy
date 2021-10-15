@@ -1,19 +1,19 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Region index{% endblock %}
+{% block title %}Liste des régions{% endblock %}
 
 {% block main %}
-    <h1>Region index</h1>
+    <h1>Liste des régions</h1>
 
     <table class="table">
         <thead>
             <tr>
-                <th>Id</th>
-                <th>Name</th>
-                <th>Presentation</th>
-                <th>Country</th>
+                <th>Identifiant de région</th>
+                <th>Nom</th>
+                <th>Présentation</th>
+                <th>Pays</th>
                 <th>Actions</th>
-                <th>Rooms</th>
+                <th>Couettes et cafés disponibles dans cette région</th>
             </tr>
         </thead>
         <tbody>
@@ -24,21 +24,22 @@
                 <td>{{ region.presentation }}</td>
                 <td>{{ region.country }}</td>
                 <td>
-                    <a href="{{ path('region_show', {'id': region.id}) }}">show</a>
+                    <a href="{{ path('region_show', {'id': region.id}) }}">voir la région</a>
+                    <br>
                     {% if is_granted('ROLE_ADMIN') %}
-                        <a href="{{ path('region_edit', {'id': region.id}) }}">edit</a>
+                        <a href="{{ path('region_edit', {'id': region.id}) }}">editer la région</a>
                     {% endif %}
                 </td>
-                <td> <a href="{{path('room_by_region', {'id': region.id}) }}">Rooms</a></td>
+                <td> <a href="{{path('room_by_region', {'id': region.id}) }}">voir</a></td>
             </tr>
         {% else %}
             <tr>
-                <td colspan="5">no records found</td>
+                <td colspan="5">Aucune région enregistrées</td>
             </tr>
         {% endfor %}
         </tbody>
     </table>
     {% if is_granted('ROLE_ADMIN') %}
-        <a href="{{ path('region_new') }}">Create new</a>
+        <a href="{{ path('region_new') }}">Créer une nouvelle région</a>
     {% endif %}
 {% endblock %}

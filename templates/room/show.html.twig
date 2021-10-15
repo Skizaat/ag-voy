@@ -1,18 +1,18 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Room{% endblock %}
+{% block title %}Couette{% endblock %}
 
 {% block main %}
-    <h1>Room</h1>
+    <h1>Détails Couette et Cafés</h1>
 
     <table class="table">
         <tbody>
             <tr>
-                <th>Id</th>
+                <th>N° de Couette</th>
                 <td>{{ room.id }}</td>
             </tr>
             <tr>
-                <th>Summary</th>
+                <th>Nom</th>
                 <td>{{ room.summary }}</td>
             </tr>
             <tr>
@@ -20,43 +20,43 @@
                 <td>{{ room.description }}</td>
             </tr>
             <tr>
-                <th>Capacity</th>
+                <th>Capacité (en nombre de personne)</th>
                 <td>{{ room.capacity }}</td>
             </tr>
             <tr>
-                <th>Superficy</th>
+                <th>Superficie (en mètres carrés)</th>
                 <td>{{ room.superficy }}</td>
             </tr>
             <tr>
-                <th>Price</th>
+                <th>Prix en € par nuit</th>
                 <td>{{ room.price }}</td>
             </tr>
             <tr>
-                <th>Address</th>
+                <th>Adresse</th>
                 <td>{{ room.address }}</td>
             </tr>
             <tr>
-                <th>Regions</th>
+                <th>Régions</th>
                   {% for region in room.regions %}
                      <td><a href="{{ path('region_show', {'id' : region.id}) }}">{{ region.name }}</a></td>
                     <br>
                     {% endfor %}
             </tr>
             <tr>
-                <th>Owner</th>
+                <th>Propriétaire</th>
                  <td><a href="{{ path('owner_show', {'id' : room.owner.id}) }}">{{ room.owner.familyname }}</a></td>
             </tr>
             <tr>
-                <th>Image</th>
+                <th>Aperçu</th>
                 <td><img src="{{ vich_uploader_asset(room, 'imageFile') }}"/></td>
             </tr>
         </tbody>
     </table>
 
-    <a href="{{ path('room_index') }}">back to list</a>
+    <a href="{{ path('room_index') }}">retour à a liste des couettes et cafés</a>
 
     {% if is_granted('ROLE_USER') %}
-        <a href="{{ path('room_edit', {'id': room.id}) }}">edit</a>
+        <a href="{{ path('room_edit', {'id': room.id}) }}">editer cette couette</a>
 
       {{ include('room/_delete_form.html.twig') }}
     {% endif %}

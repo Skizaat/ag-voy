@@ -1,57 +1,59 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Owner{% endblock %}
+{% block title %}Propriétaire{% endblock %}
 
 {% block main %}
-    <h1>Owner</h1>
+    <h1>Profil</h1>
 
     <table class="table">
         <tbody>
             <tr>
-                <th>Id</th>
+                <th>N° de propriétaire</th>
                 <td>{{ owner.id }}</td>
             </tr>
             <tr>
-                <th>Firstname</th>
+                <th>Prénom</th>
                 <td>{{ owner.firstname }}</td>
             </tr>
             <tr>
-                <th>Familyname</th>
+                <th>Nom de famille</th>
                 <td>{{ owner.familyname }}</td>
             </tr>
             <tr>
-                <th>Address</th>
+                <th>Adresse</th>
                 <td>{{ owner.address }}</td>
             </tr>
             <tr>
-                <th>Country</th>
+                <th>Pays</th>
                 <td>{{ owner.country }}</td>
             </tr>
             <tr>
-                <th>Rooms</th>
+                <th>Couette et Cafés proposés</th>
                 {% for room in owner.rooms %}
                 <td><a href="{{ path('room_show', {'id' : room.id}) }}">{{ room.summary }}</a></td>
                 <br>
                 {% endfor %}
             </tr>
             <tr>
-                <th>Image</th>
+                <th>Aperçu</th>
                 <td><img src="{{ vich_uploader_asset(owner, 'imageFile') }}"/></td>
             </tr>
         </tbody>
     </table>
     {% if is_granted('ROLE_USER') %}
-        <a href="{{ path('new_room_of', {'id': owner.id}) }}">create a new room</a>
+        <a href="{{ path('new_room_of', {'id': owner.id}) }}">créer une nouvelle couette et café pour ce propriétaire</a>
     {% endif %}
 
     <br>
     <br>
 
-    <a href="{{ path('owner_index') }}">back to list</a>
+    <a href="{{ path('owner_index') }}">retour à la liste des propriétaires</a>
+    <br>
+    <br>
 
     {% if is_granted('ROLE_USER') %}
 
-    <a href="{{ path('owner_edit', {'id': owner.id}) }}">edit</a>
+    <a href="{{ path('owner_edit', {'id': owner.id}) }}">editer le profil</a>
 
     {{ include('owner/_delete_form.html.twig') }}
 

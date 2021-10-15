@@ -1,21 +1,22 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Room index{% endblock %}
+{% block title %}Liste des couettes{% endblock %}
 
 {% block main %}
-    <h1>Room index</h1>
+    <h1>Liste des couettes et cafés</h1>
 
     <table class="table">
         <thead>
             <tr>
-                <th>Id</th>
-                <th>Summary</th>
+                <th>N° de couette</th>
+                <th>Nom</th>
                 <th>Description</th>
-                <th>Capacity</th>
-                <th>Superficy</th>
-                <th>Price</th>
-                <th>Address</th>
-                <th>actions</th>
+                <th>Capacité (en nombre de personne)</th>
+                <th>Superficie (en mètres carrés)</th>
+                <th>Prix en € par nuit</th>
+                <th>Adresse</th>
+                <th>Actions</th>
+                <th>Aperçu</th>
             </tr>
         </thead>
         <tbody>
@@ -29,15 +30,16 @@
                 <td>{{ room.price }}</td>
                 <td>{{ room.address }}</td>
                 <td>
-                    <a href="{{ path('room_show', {'id': room.id}) }}">show</a>
+                    <a href="{{ path('room_show', {'id': room.id}) }}">voir la couette</a>
                     {% if is_granted('ROLE_USER') %}
-                        <a href="{{ path('room_edit', {'id': room.id}) }}">edit</a>
+                        <a href="{{ path('room_edit', {'id': room.id}) }}">editer la couette</a>
                     {% endif %}
                 </td>
+                <td><img src="{{ vich_uploader_asset(room, 'imageFile') }}"/></td>
             </tr>
         {% else %}
             <tr>
-                <td colspan="8">no records found</td>
+                <td colspan="8">Il n'y a pas de couettes et cafés disponibles</td>
             </tr>
         {% endfor %}
         </tbody>
