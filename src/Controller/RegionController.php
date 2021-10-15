@@ -38,7 +38,6 @@ class RegionController extends AbstractController
             $imagefile = $region->getImageFile();
             if($imagefile) {
                 $mimetype = $imagefile->getMimeType();
-                $region->setContentType($mimetype);
             }
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($region);

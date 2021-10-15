@@ -18,7 +18,7 @@ class RegionType extends AbstractType
             ->add('presentation')
             ->add('country')
             //->add('rooms')
-            ->add('imageName', TextType::class,  ['disabled' => true])
+            //->add('imageName', TextType::class,  ['disabled' => true])
             ->add('imageFile', VichImageType::class, ['required' => false])
         ;
     }

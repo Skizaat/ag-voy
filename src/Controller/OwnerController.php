@@ -38,7 +38,6 @@ class OwnerController extends AbstractController
             $imagefile = $owner->getImageFile();
             if($imagefile) {
                 $mimetype = $imagefile->getMimeType();
-                $owner->setContentType($mimetype);
             }
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($owner);

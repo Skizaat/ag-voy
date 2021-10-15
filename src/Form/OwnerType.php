@@ -18,7 +18,7 @@ class OwnerType extends AbstractType
             ->add('familyname')
             ->add('address')
             ->add('country')
-            ->add('imageName', TextType::class,  ['disabled' => true])
+            //->add('imageName', TextType::class,  ['disabled' => true])
             ->add('imageFile', VichImageType::class, ['required' => false])
         ;
     }
