@@ -11,3 +11,18 @@ bootstrap_menu:
         Owner:
           label: 'Propriétaires'
           route: 'owner_index'
+    anonymousaccount:
+      items: 
+        login:
+           label: 'Login'
+           route: 'app_login'
+#        register:
+#           label: 'Register'
+#           route: 'app_register'
+    account:
+       items:
+         logout:
+            label: 'Logout'
+            route: 'app_logout'
+            roles: [ 'ROLE_USER' ]
+      

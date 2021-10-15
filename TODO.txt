@@ -17,9 +17,11 @@ _A faire incessament sous peu_
 
 - j'arrive pas à associer une région à des rooms
 
+
 "Fixed bug"
 
 - je peux rentrer qu'un caractère pour la country quand je crée une région (réglé)
+- les items de menu s'affichent 2 fois
 
 ~Fait~
 - créer le Git
