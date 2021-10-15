@@ -3,19 +3,16 @@
 
 
 - faire une mindmap du projet (en cours d'avancement)
-- mettre mes fiches papier dans le projet
 (- Lire de la documentation)
 
 _A faire incessament sous peu_
 
-- rajouter le lien entre entité onetomany
-- rajouter les images
-- rajouter les sessions et les rôles
+rendre le projet
 
 
 'Bug to fix'
 
-- j'arrive pas à associer une région à des rooms
+- j'arrive pas à associer une région à des rooms (bon du coup ça c'est lié aux relations manytomany donc je paux pas faire grand chose)
 
 
 "Fixed bug"
@@ -33,3 +30,7 @@ _A faire incessament sous peu_
 - créer les pages de consultation des premières entités => avec les cruds
 - actualiser le menu
 - Faire une fiche résumé des commandes vues dans les TP précédents
+- rajouter le lien entre entité onetomany
+- rajouter les images
+- rajouter les sessions et les rôles
+- mettre mes fiches papier dans le projet
