@@ -2,6 +2,8 @@
 
 namespace App\Entity;
 
+use Vich\UploaderBundle\Mapping\Annotation as Vich;
+use Symfony\Component\HttpFoundation\File\File;
 use App\Repository\OwnerRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
@@ -9,6 +11,7 @@ use Doctrine\ORM\Mapping as ORM;
 
 /**
  * @ORM\Entity(repositoryClass=OwnerRepository::class)
+ * @Vich\Uploadable
  */
 class Owner
 {
@@ -43,6 +46,26 @@ class Owner
      * @ORM\OneToMany(targetEntity=Room::class, mappedBy="owner", orphanRemoval=true)
      */
     private $rooms;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     * @var string
+     */
+    private $imageName;
+
+    /**
+     * @Vich\UploadableField(mapping="Owner", fileNameProperty="imageName")
+     * @var File
+     */
+    private $imageFile;
+
+    /**
+     * @ORM\Column(type="datetime", nullable=true)
+     *
+     * @var \DateTime
+     */
+    private $imageUpdatedAt;
+
 
     public function __construct()
     {
@@ -147,4 +170,32 @@ class Owner
     public function __toString(){
         return $this->firstname . $this->familyname . $this->address;
     }
+
+    /**
+     * @param File|\Symfony\Component\HttpFoundation\File\UploadedFile $imageFile
+     */
+    public function setImageFile(?File $imageFile = null): void
+    {
+        $this->imageFile = $imageFile;
+
+        if (null !== $imageFile) {
+        $this->imageUpdatedAt = new \DateTimeImmutable();
+        }
+    }
+
+    public function getImageFile(): ?File
+    {
+        return $this->imageFile;
+    }
+
+    public function setImageName(?string $imageName): void
+    {
+        $this->imageName = $imageName;
+    }
+
+    public function getImageName(): ?string
+    {
+        return $this->imageName;
+    }
+
 }

@@ -35,6 +35,11 @@ class OwnerController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+            $imagefile = $owner->getImageFile();
+            if($imagefile) {
+                $mimetype = $imagefile->getMimeType();
+                $owner->setContentType($mimetype);
+            }
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($owner);
             $entityManager->flush();

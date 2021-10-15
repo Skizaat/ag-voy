@@ -35,6 +35,11 @@ class RegionController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+            $imagefile = $region->getImageFile();
+            if($imagefile) {
+                $mimetype = $imagefile->getMimeType();
+                $region->setContentType($mimetype);
+            }
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($region);
             $entityManager->flush();

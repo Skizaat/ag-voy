@@ -47,6 +47,10 @@
                 <th>Owner</th>
                  <td><a href="{{ path('owner_show', {'id' : room.owner.id}) }}">{{ room.owner.familyname }}</a></td>
             </tr>
+            <tr>
+                <th>Image</th>
+                <td><img src="{{ vich_uploader_asset(room, 'imageFile') }}"/></td>
+            </tr>
         </tbody>
     </table>
 
