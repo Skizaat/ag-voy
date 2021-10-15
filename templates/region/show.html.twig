@@ -38,9 +38,11 @@
     </table>
 
     <a href="{{ path('region_index') }}">retour à la liste des régions</a>
+    <br>
+    <br>
 
     {% if is_granted('ROLE_ADMIN') %}
-        <a href="{{ path('region_edit', {'id': region.id}) }}">éditer une région</a>
+        <a href="{{ path('region_edit', {'id': region.id}) }}">éditer cette région</a>
     
         {{ include('region/_delete_form.html.twig') }}
     {% endif %}
